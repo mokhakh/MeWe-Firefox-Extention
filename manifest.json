@@ -1,0 +1,30 @@
+{
+	"manifest_version": 2,
+	"name": "Mewe",
+	"version": "1.0",
+	"description": "Download From Mewe.",
+	"icons": {
+		"48": "icons/download-48.png"
+	},
+	"web_accessible_resources": ["icons/download-48.png"],
+	"permissions": [
+		"downloads"
+	],
+    "background": {
+        "scripts": [
+          "js/download.js"          
+        ]
+      },
+	"content_scripts": [{
+			"matches": ["*://*.mewe.com/*"],
+			"js": [
+                "js/jquery.js",
+                "index.js"                
+			],
+			"css": [
+				"css/index.css"
+			]
+		}
+	]
+
+}
