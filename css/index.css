@@ -1,17 +1,15 @@
-.ext_desktop_dl_btn{
-    position: absolute!important;
+.ext_desktop_dl_btn, .ext_desktop_gif_btn {
+position: absolute!important;
 text-decoration: none !important;
 z-index: 100;
 line-height: 1.2;
 padding: 5px;
 top: 2%;
 left: 2%;
-display: none;
-background:
-#fff;
+display: none!important;
+background:#fff;
 font-weight: 700;
-color:
-#0f0f11 !important;
+color:#0f0f11 !important;
 transition: all .3s ease-in-out;
 opacity: .7;
 cursor: pointer;
@@ -22,17 +20,29 @@ border: 1px solid #ccc;
 box-shadow: 1px 1px #ccc;
 }
 
-.c-mw-post-photo:hover .ext_desktop_dl_btn {
+.c-mw-post-photo:hover .ext_desktop_dl_btn ,
+.c-mw-post-photo:hover .ext_desktop_gif_btn ,
+.chat-message_img_gif-wrapper:hover .ext_desktop_gif_btn,
+.chat-message_img_wrapper:hover .ext_desktop_dl_btn
+{
     opacity: 1;
-    display: flex;
+    display: flex!important;
 }
 
-.c-mw-post-photo{
+.c-mw-post-photo,
+.post-photo_gif-wrapper,
+.chat-message_img_gif-wrapper,
+.chat-message_img_wrapper
+{
     position: relative!important;
 }
 
 
-.ext_desktop_dl_btn .ext_icon {
+.ext_desktop_dl_btn .ext_icon ,
+.ext_desktop_gif_btn .ext_icon ,
+.chat-message_img_gif-wrapper .ext_icon,
+.chat-message_img_wrapper .ext_icon
+{    
     width: 20px;
     height: 20px;
     display: inline-block;
@@ -43,7 +53,10 @@ box-shadow: 1px 1px #ccc;
     background-size: cover;
 }
 
-.ext_desktop_dl_btn .ext_text {
+.ext_desktop_dl_btn .ext_text,
+.ext_desktop_gif_btn .ext_text,
+.chat-message_img_gif-wrapper .ext_text,
+.chat-message_img_wrapper .ext_text {
     font-size: 12px;
     letter-spacing: -.3px;
     margin-left: 5px;
